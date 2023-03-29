@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e1e9ec;
+  font-family: "Open Sans", sans-serif;
+}
+.crum {
+  width: 93%;
+  height: 60px;
+  border-bottom: 3px solid #e0e0e0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.container {
+  width: 93%;
+  height: 60px;
+  margin: auto;
+}
+.tags {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.promo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.promo2 p {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+.life {
+  width: 73%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.life2 p {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+.box2 {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button1 {
+  width: 60px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  font-weight: 200;
+}
+.button2{
+    width: 60px;
+    height: 25px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 11px;
+    display: inline-block;
+    color: #666;
+    cursor: pointer;
+    font-weight: 200; 
+}
+.button3{
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  font-weight: 200;
+}
+.button4{
+  width: 110px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  font-weight: 200;
+}
+.button5{
+    width: 110px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  font-weight: 200;
+}
+.container2{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.side{
+    width: 25%;
+    height: 50rem;
+}
+.product{
+   width: 73%;
+   height: 50rem;
+   border: 2px solid red;
+}
