@@ -4,6 +4,8 @@ require('dotenv').config()
 const cors = require('cors');
 const { AdminRouter } = require('./routes/Admin.routes');
 const { UserRouter } = require('./routes/User.routes');
+const {productRouter} = require("./routes/product.router");
+const {connection} = require("./connection/connection")
 const port = process.env.port
 
 
@@ -17,7 +19,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/admin", AdminRouter)
-app.use('/user', UserRouter)
+app.use('/user', UserRouter);
+app.use("/product" , productRouter);
 
 app.listen(port, async () => {
     try {
