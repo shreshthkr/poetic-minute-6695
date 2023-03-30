@@ -5,6 +5,10 @@ import Navbar from './Components/Navbar';
 import { Container } from '@chakra-ui/react'
 
 
+
+
+
+
 import { AllRoutes } from './Routes/AllRoutes';
 
 
@@ -18,7 +22,7 @@ function App() {
      
     </Container>
 
-      <Navbar />
+
       <AllRoutes />
 
     </div>
