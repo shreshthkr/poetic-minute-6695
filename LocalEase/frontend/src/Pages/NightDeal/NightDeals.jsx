@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { NightSideBar } from "./NightSideBar";
+import NightDealProductCard from "./NightDealProductCard";
 
 export const NightDeals = () => {
   return (
@@ -88,7 +89,9 @@ export const NightDeals = () => {
           <div className={styles.side} >
             <NightSideBar />
           </div>
-          <div className={styles.product}></div>
+          <div className={styles.product}>
+            <NightDealProductCard />
+          </div>
         </div>
       </div>
     </div>
