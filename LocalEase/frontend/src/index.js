@@ -18,13 +18,6 @@ root.render(
   </BrowserRouter>
   </ChakraProvider>
 
-import { BrowserRouter } from 'react-router-dom';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
 
 );
 
