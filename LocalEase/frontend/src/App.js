@@ -18,7 +18,7 @@ function App() {
 
     
       <Container maxW='100%'  margin='0px' marginTop="0" textAlign='center' padding='0px'  >
-     <Navbar/>
+     {/* <Navbar/> */}
      
     </Container>
 
