@@ -120,15 +120,17 @@
     height: auto;
     margin: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 .side{
     width: 25%;
     height: 50rem;
 }
-.product{
+.product_list{
    width: 73%;
-   height: 50rem;
-   border: 2px solid red;
+   height: auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) ;
+   gap: 10px;
 }
