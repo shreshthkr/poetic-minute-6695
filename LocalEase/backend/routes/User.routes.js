@@ -6,7 +6,7 @@ const { UserModel } = require('../model/User.model');
 
 const {userAuthentication} = require("../middleware/user.middleware")
 
-const { userAuthentication } = require('../middleware/user.middleware');
+//const { userAuthentication } = require('../middleware/user.middleware');
 
 
 const UserRouter = express.Router();

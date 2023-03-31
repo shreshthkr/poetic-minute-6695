@@ -9,6 +9,7 @@
          "heading":String,
          "value" : String,
          "value_2" : String,
+         "price" : Number,
          "tag" : String,
          "field" : String
   })
