@@ -19,9 +19,9 @@ export const getProduct=(param) => (dispatch) => {
     axios.get(`https://giddy-lamb-button.cyclic.app/product`,param)
     .then((res) => {
        dispatch(getProductSuccess(res.data));
-       console.log(res.data)
+    //console.log(res.data).
     })
     .catch((err) => {
-        dispatch(getProductError(err))
+        dispatch(getProductError())
     })
 }

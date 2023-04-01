@@ -27,9 +27,10 @@ export const NightDeals = () => {
   useEffect(() => {
     dispatch(getProduct(obj));
   }, [location.search]);
-  console.log(getProduct(obj));
+
   return (
     <div>
+      <div className={styles.back}>
       <div className={styles.crum}>
         <Breadcrumb
           spacing="8px"
@@ -81,6 +82,7 @@ export const NightDeals = () => {
         </Breadcrumb>
       </div>
       <div className={styles.container}>
+      <div className={styles.main}>
         <div className={styles.tags}>
           <div className={styles.promo}>
             <div className={styles.promo2}>
@@ -114,6 +116,8 @@ export const NightDeals = () => {
               })}
           </div>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );
