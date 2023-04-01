@@ -179,7 +179,7 @@ export default function Navbar() {
               }}>
 
 
-              <h3 >{Name ? "Hi, " + Name : "Sign In"}</h3>
+              <h3 >{Name ? "Hi, " + Name : "Login In"}</h3>
 
             </Button>
           </NavLink>
