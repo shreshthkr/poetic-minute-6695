@@ -6,13 +6,13 @@ const { UserModel } = require('../model/User.model');
 
 const {userAuthentication} = require("../middleware/user.middleware")
 
-const { userAuthentication } = require('../middleware/user.middleware');
+//const { userAuthentication } = require('../middleware/user.middleware');
 
 
 const UserRouter = express.Router();
 
 UserRouter.post("/register", async (req, res) => {
-  const { name, email, city, password } = req.body;
+  const { first_name,last_name, email, city, password } = req.body;
 
   const user = await UserModel.find({ email });
 
@@ -23,7 +23,8 @@ UserRouter.post("/register", async (req, res) => {
       } else {
         try {
           const newUser = new UserModel({
-            name,
+            first_name,
+            last_name,
             email,
             city,
             password: hash,

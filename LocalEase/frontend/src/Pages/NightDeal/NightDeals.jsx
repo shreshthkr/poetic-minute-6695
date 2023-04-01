@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./NightDeals.module.css";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-} from "@chakra-ui/react";
+import NightDealProductCard from "./NightDealProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { getProduct } from "../../Redux/Product/action";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { NightSideBar } from "./NightSideBar";
-import NightDealProductCard from "./NightDealProductCard";
 
 export const NightDeals = () => {
+  const dispatch = useDispatch();
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const productData = useSelector((store) => {
+    return store.productReducer.product;
+  });
+ 
+  let obj = {
+    params: {
+      value: searchParams.getAll("value"),
+      _sort: searchParams.get("order") && "price",
+      _order: searchParams.get("order"),
+    },
+  };
+
+  useEffect(() => {
+    dispatch(getProduct(obj));
+  }, [location.search]);
+
   return (
     <div>
+      <div className={styles.back}>
       <div className={styles.crum}>
         <Breadcrumb
           spacing="8px"
@@ -63,6 +82,7 @@ export const NightDeals = () => {
         </Breadcrumb>
       </div>
       <div className={styles.container}>
+      <div className={styles.main}>
         <div className={styles.tags}>
           <div className={styles.promo}>
             <div className={styles.promo2}>
@@ -85,14 +105,19 @@ export const NightDeals = () => {
             </div>
           </div>
         </div>
-        <div className={styles.container2} >
-          <div className={styles.side} >
+        <div className={styles.container2}>
+          <div className={styles.side}>
             <NightSideBar />
           </div>
-          <div className={styles.product}>
-            <NightDealProductCard />
+          <div className={styles.product_list}>
+            {productData.length > 0 &&
+              productData.map((el) => {
+                return <NightDealProductCard key={el._id} product={el} />;
+              })}
           </div>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );

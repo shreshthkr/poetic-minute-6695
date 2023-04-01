@@ -7,11 +7,12 @@
          "rating_img_src":String,
          "rating" : Number,
          "heading":String,
-         "value" : String,
+         "category" : String,
          "value_2" : String,
+         "price" : Number,
          "tag" : String,
-         "field" : String
-  })
+         "field" : String,
+})
 
   const ProductModel = mongoose.model("Product" , ProductSchema);
 

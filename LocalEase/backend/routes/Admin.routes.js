@@ -74,5 +74,20 @@ AdminRouter.get("/allusers", authentication, async (req, res) => {
       .send({ msg: "Admin is not authenticated,Please login first" });
   }
 });
+AdminRouter.patch('/forgot-password', async (req, res) => {
+  const { email, password } = req.body
+  const admin = AdminModel.find({ email })
+  if (admin.length > 0) {
+    bcrypt.hash(password, 5, async (err, hash) => {
+      if (err) res.send({ msg: "Something went wrong", error: err.message })
+      else {
+        await AdminModel.findOneAndUpdate({email},{ password: hash })
+        res.status(201).send('Password is updated.Try to Login.')
+      }
+    })
+  } else {
+    res.send({ msg: "E-mail is not registered." });
+  }
+})
 
 module.exports = { AdminRouter };

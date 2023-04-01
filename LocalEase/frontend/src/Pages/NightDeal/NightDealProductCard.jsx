@@ -4,7 +4,7 @@ import styles from "./NightDealProductCard.module.css"
 
 
 
-const NightDealProductCard = () => {
+const NightDealProductCard = ({product}) => {
 
     const navigate = useNavigate();
 
@@ -17,20 +17,20 @@ const handleNavigate=()=>{
       <div className={styles.product_box} onClick={handleNavigate} >
           <div className={styles.details}>
              <div className={styles.image}>
-                <img src="https://img4.nbstatic.in/tr:w-350/60deccba40e9df000b9f27ac.jpg" alt="chamber" />
+                <img src={product.img_src} alt={product.heading} />
              </div>
              <div className={styles.info}>
-                <h3>Lord of the Drinks Chamber</h3>
-                <p>Rajouri Garden Main Market, Rajouri Garden</p>
+                <h3>{product.heading}</h3>
+                <p>{product.category}</p>
                 <div className={styles.deals} >
                     <div className={styles.deals1}><p>DEALS</p></div>
-                    <div className={styles.deals2}><p>Drinks with Starters from ₹1599 </p></div>
+                    <div className={styles.deals2}><p>Drinks with Starters from {product.price} </p></div>
                 </div>
              </div>
           </div>
              <div className={styles.bought}>
                 <div>
-                <p>13,413 Bought</p>
+                <p>{product.field}</p>
                 </div>
              </div>
       </div>
@@ -38,4 +38,4 @@ const handleNavigate=()=>{
   )
 }
 
-export default NightDealProductCard
+export default NightDealProductCard;
