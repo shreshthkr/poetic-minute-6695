@@ -21,7 +21,7 @@ const handleNavigate=()=>{
              </div>
              <div className={styles.info}>
                 <h3>{product.heading}</h3>
-                <p>{product.value}</p>
+                <p>{product.category}</p>
                 <div className={styles.deals} >
                     <div className={styles.deals1}><p>DEALS</p></div>
                     <div className={styles.deals2}><p>Drinks with Starters from {product.price} </p></div>

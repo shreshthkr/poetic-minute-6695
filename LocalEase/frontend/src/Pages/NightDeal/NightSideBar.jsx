@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState ,useEffect}from "react";
 import styles from "./NightSideBar.module.css";
 import { RiArrowRightSFill } from "react-icons/ri";
 import {
@@ -9,8 +9,47 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 import { Box, Text } from "@chakra-ui/react";
+import { useSearchParams } from "react-router-dom";
+
+
 
 export const NightSideBar = () => {
+
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialState = searchParams.getAll("value"); 
+  const initialOrder = searchParams.get("order");
+  const [value, setvalue] = useState(initialState || [])
+  const [order, setOrder] = useState(initialOrder || "");
+
+  console.log(initialState);
+const handleChange = (e) => {
+  let newValue = [...value];
+  let address = e.target.value;
+
+
+if(newValue.includes(address)){
+  newValue.splice(newValue.indexOf(address),1)
+}else{
+  newValue.push(address);
+}
+setvalue(newValue);
+}
+
+
+useEffect(()=>{
+  let param = {
+    value
+  };
+
+  setSearchParams(param);
+},[value])
+
+ const handleSort = () => {
+
+ }
+
+
   return (
     <>
       <div className={styles.container}>
@@ -72,13 +111,17 @@ export const NightSideBar = () => {
               >
                 <AccordionItem backgroundColor="white">
                   <h2 backgroundColor="white">
-                    <AccordionButton backgroundColor="white" border="none">
+                    <AccordionButton backgroundColor="white"
+                     border="none"
+                     _hover={{backgroundColor:"white"}}
+                     >
                       <Box
                         as="span"
                         flex="1"
                         textAlign="left"
                         height="25px"
                         backgroundColor="white"
+                        _hover={{backgroundColor:"white"}}
                       >
                         <Text
                           backgroundColor="white"
@@ -104,7 +147,11 @@ export const NightSideBar = () => {
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox" />
+                      <input type="checkbox"
+                      value="Aerocity"
+                      onChange={handleChange}
+                      checked={value.includes("Aerocity")}
+                      />
                       <Box
                         width="100%"
                         display="flex"
@@ -125,7 +172,12 @@ export const NightSideBar = () => {
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox" />
+                      <input 
+                      type="checkbox"
+                      value="HKV"
+                      onChange={handleChange}
+                      checked={value.includes("HKV")}
+                      />
                       <Box
                         width="100%"
                         display="flex"
@@ -146,7 +198,11 @@ export const NightSideBar = () => {
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox" />
+                      <input type="checkbox"
+                      value="Rajouri Garden Main Market, Rajouri Garden"
+                      onChange={handleChange}
+                      checked={value.includes("Rajouri Garden Main Market, Rajouri Garden")}
+                      />
                       <Box
                         width="100%"
                         display="flex"
@@ -167,14 +223,18 @@ export const NightSideBar = () => {
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox" />
+                      <input type="checkbox"
+                        value="Connaught Place"
+                        onChange={handleChange}
+                        checked={value.includes("Connaught Place")}
+                      />
                       <Box
                         width="100%"
                         display="flex"
                         justifyContent="space-between"
                         backgroundColor="#fff"
                       >
-                        <label backgroundColor="#fff">Punjab Bagh West</label>
+                        <label backgroundColor="#fff">Connaught Place</label>
                         <Text backgroundColor="#fff" fontSize="12px">
                           (7)
                         </Text>
@@ -191,6 +251,7 @@ export const NightSideBar = () => {
                       backgroundColor="#fff"
                       border="none"
                       marginTop="15px"
+                      _hover={{backgroundColor:"white"}}
                     >
                       <Box
                         as="span"
@@ -216,7 +277,11 @@ export const NightSideBar = () => {
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox" />
+                      <input type="checkbox"
+                         value="Sahibabad"
+                         onChange={handleChange}
+                         checked={value.includes("Sahibabad")}
+                      />
                       <Box
                         width="100%"
                         display="flex"
