@@ -11,8 +11,8 @@
          "value_2" : String,
          "price" : Number,
          "tag" : String,
-         "field" : String
-  })
+         "field" : String,
+})
 
   const ProductModel = mongoose.model("Product" , ProductSchema);
 
