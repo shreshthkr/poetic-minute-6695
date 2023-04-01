@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./DealsPage.module.css"
+import DealsCard from './DealsCard'
 
 
 export const DealsPage = () => {
@@ -19,11 +20,40 @@ export const DealsPage = () => {
                   | <p>4.4/5</p>
                 </div>
               </div>
-              <div></div>
+              <div>
+                <p>Rajouri Garden Main Market, Rajouri Garden</p>
+              </div>
             </div>
-            <div className={styles.image}></div>
+            <div className={styles.image}>
+              <img src="https://img4.nbstatic.in/tr:w-500/60deccba40e9df000b9f27ac.jpg" alt="Lords and drinks" />
+              <img src="https://img4.nbstatic.in/tr:w-500/63f60d648db992000be134e4.jpg" alt="pic" />
+            </div>
          </div>
-         <div className={styles.Deals}></div>
+         <div className={styles.Deals}>
+           <div className={styles.about}>
+                <div className={styles.firstdiv}>
+                  <div className={styles.dealsa} >
+                    <p>Deals</p>
+                  </div>
+                  <div className={styles.abouta}>
+                    <p>About</p>
+                  </div>
+                  <div className={styles.photos}>
+                    <p>Photos</p>
+                  </div>
+                </div>
+                <div className={styles.seconddiv}>
+                  <div className={styles.seconda}>
+                    <div className={styles.deals_data} >
+                      <DealsCard />
+                    </div>
+                    <div className={styles.about_data}></div>
+
+                  </div>
+                  <div className={styles.secondb}></div>
+                </div>
+           </div>
+         </div>
       </div>  
     </>
   )
