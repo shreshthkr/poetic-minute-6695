@@ -1,20 +1,19 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from "./NightDealProductCard.module.css"
 
 
 
 const NightDealProductCard = ({product}) => {
 
-    const navigate = useNavigate();
 
-const handleNavigate=()=>{
-    navigate("/deals")
-}
+
+
 
   return (
     <>
-      <div className={styles.product_box} onClick={handleNavigate} >
+    <Link to={`/nightdeals/${product._id}`}>
+      <div className={styles.product_box}>
           <div className={styles.details}>
              <div className={styles.image}>
                 <img src={product.img_src} alt={product.heading} />
@@ -34,6 +33,7 @@ const handleNavigate=()=>{
                 </div>
              </div>
       </div>
+      </Link>
     </>
   )
 }

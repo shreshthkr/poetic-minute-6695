@@ -23,21 +23,21 @@
                const product = await ProductModel.find({category:"Aerocity"});
                res.status(200).send(product);
           }
-          if(req.query.location == "connaughtplace"){
+          if(req.query.location === "connaughtplace"){
                const product = await ProductModel.find({category:"Connaught Place"});
                res.status(200).send(product);
           }
-          if(req.query.location == "rajourigarden"){
+          if(req.query.location === "rajourigarden"){
                const product = await ProductModel.find({category:"Rajouri Garden Main Market, Rajouri Garden"});
                res.status(200).send(product);
           }
 
-          if(req.query.location == "punjabibagh"){
+          if(req.query.location === "punjabibagh"){
                const product = await ProductModel.find({category:"Club Road Market, Punjabi Bagh West"});
                res.status(200).send(product);
           }
 
-          if(req.query.location == "hkv"){
+          if(req.query.location === "hkv"){
                const product = await ProductModel.find({category:"HKV"});
                res.status(200).send(product);
           }
