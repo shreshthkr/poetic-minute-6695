@@ -9,17 +9,10 @@ const { cloudinary } = require("../utils/cloudinary");
 productRouter.post("/addproduct", authentication, async (req, res) => {
      try {
           const { adminID, url, img_src, rating_img_src, rating, heading, category, value_2, price, tag, field } = req.body
-          if (img_src) {
-               const uploadRes = await cloudinary.uploader.upload(img_src, {
-                    upload_preset: "localEase_Image"
-               })
-               if (uploadRes) {
-                    const product = new ProductModel({ adminID, url, img_src: uploadRes, rating_img_src, rating, heading, category, value_2, price, tag, field });
+         
+                    const product = new ProductModel({ adminID, url, img_src, rating_img_src, rating, heading, category, value_2, price, tag, field });
                     await product.save();
                     res.status(200).send({ "msg": " Product data successfully added" })
-
-               }
-          }
      }
      catch (err) {
           res.send({ "msg": err.message })
