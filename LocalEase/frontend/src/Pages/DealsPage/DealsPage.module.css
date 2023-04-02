@@ -5,17 +5,17 @@
     display: felx;
     flex-direction: column;
     gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     
 }
 .heading{
     width: 93%;
     height: 240px;
-    border: 1px dashed red;
     box-sizing: border-box;
     margin: auto;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px solid 4px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,7 +23,6 @@
 .title{
     width: 40%;
     height: 95%;
-    border: 2px dotted rgb(252, 3, 45);
     background-color: #fff;
 
 }
@@ -32,12 +31,21 @@
    align-items: center;
    justify-content: space-between;
    width: 100%;
+   height: 18px;
     background-color: #fff;
 
 
 }
 .title>div:first-child p{
     background-color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #999999;
+}
+.title>div:first-child>p~p{
+    font-weight: 400;
 }
 .title>div~div{
     background-color: #fff;
@@ -46,33 +54,62 @@
     align-items: center;
     justify-content: space-between;
 }
+.prodHead h1{
+    width: 70%;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #333333;
+    white-space: pre-wrap;
+} 
 .logo{
     width:87px;
     background-color: #fff;
     height: 26px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid solid #E0E0E0;
+    border-radius: 5px;
+}
+.logo img{
+   width: 20px;
+
+}
+.logo p span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.address{
+    margin-top: 20px;
+}
+.address p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+  line-height: 21px;  
 }
 .image{
-    width: 48%;
+    width: 50%;
     height: 95%;
     background-color: #fff;
-    border: 2px dotted rgb(252, 3, 45);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 .image>img:first-child{
-    width: 50%;
+    width: 45%;
 }
 .image>img:last-child{
-    width: 50%;
+    width: 45%;
 }
 .Deals{
     width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: #e1e9ec;
 }
 .about{
@@ -93,6 +130,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   background-color: #fff;
 }
 .dealsa p{
     font-size: 16px;
@@ -133,6 +171,7 @@
     color: #666;
     font-weight: 600;
     white-space: nowrap;
+    font-family: "Open Sans", sans-serif;
 }
 .photos:hover{
     background-color: #fff;
@@ -140,7 +179,6 @@
 }
 .seconddiv{
     width: 100%;
-    border: 2px dashed;
     display: flex;
     align-items:flex-start;
     justify-content: space-between;
@@ -148,10 +186,337 @@
 .seconda{
     width: 68%;
     height: 500px;
-    border: 2px dotted;
 }
 .secondb{
-    width: 32%;
+    width: 35%;
     height: 500px;
-    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondb_inside{
+    width: 92%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+  
+}
+.order{
+    width: 100%;
+    min-height:52% ;
+    height:auto;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.promo_code{
+    width: 100%;
+    height:212px; 
+    background-color: #fff;
+    border-radius: 5px;
+}
+.order_first{
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E0E0E0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.order_first p{
+   font-size: 18px;
+   color: #333333;
+   font-weight: 700;
+   line-height: 18px;  
+   font-family: "Open Sans", sans-serif;
+}
+.order_second{
+   height: auto;
+   width: 95%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px; 
+   margin-top: 15px;
+}
+.order_second2{
+    width: 50%;
+    height: auto;
+}
+.order_second3{
+    width: 90%;
+    height: auto;
+}
+.option{
+   font-size: 15px;
+   font-weight: 700;
+   line-height: 18px;
+   text-align: center;
+   color: #666666; 
+   font-family: "Open Sans", sans-serif;
+}
+.empty{
+    font-size: 12px;
+    line-height: 18px;
+    color: #999999;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+.line{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.order_third{
+    width: 90%;
+    /* height: 40px; */
+    margin: auto;
+    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order_third>p:first-child{
+    font-size: 15px;
+    font-weight: 600;
+    color: #666666;
+    
+}
+.order>p:last-child{
+    font-size: 15px;
+    font-weight: 600;
+    color: #666666;
+}
+.order_fourth{
+    width: 90%;
+    height:44px ;
+    margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.order_fourth>button{
+    width: 100%;
+    height: 100%;
+    background-color: #EF534E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.promo{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid solid gainsboro;
+    border-radius: 5px;
+    background-color: white;
+}
+.promo p{
+    background-color: white;
+}
+.inpromo{
+    width: 89%;
+    height: auto;
+    margin: auto;
+    background-color: white;
+}
+.promo_a {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+
+}
+.promo_a p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+}
+.promo_b {
+    width: 100%;
+    background-color: white;
+    margin-top: 30px;
+}
+.promo_b p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    line-height: 22px;
+}
+.promo_c{
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.ease{
+    width: 40%;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid dashed rgb(203, 192, 192);
+
+}
+.ease p{
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 3px;
+   color: rgb(61, 134, 244); 
+}
+.copy{
+    width: 30%;
+    height: 30px;
+    border: 1px solid solid rgb(212, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e9ec;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.copy p{
+    background-color: #e1e9ec;
+}
+.promo_d{
+    width: 89%;
+    height: 30px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+.valid p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+.know p{
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}
+.list{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+}
+.list p:first-child{
+    width: 60%;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media all and (min-width: 801px) and (max-width: 800px){
+    .container{
+        width: 100%;
+    }
+    .heading{
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+    .title>div:first-child{
+        display: none;
+
+    }
+    .prodHead h1{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+@media all and (min-width: 100px) and (max-width: 800px){
+    .container{
+        width: 100%;
+    }
+    .heading{
+        width: 100%; 
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+    .title>div:first-child{
+        display: none;
+
+    }
+    .prodHead{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .prodHead h1{
+  width: 100%;
+  font-size: 18px;
+  
+    }
+    .address{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .address p{
+        text-align: center;
+    }
+    .image{
+        width: 100%;
+
+    }
+    .promo_code{
+        display: none;
+    }
+    .seconddiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:flex-start;
+        justify-content: space-between;
+    }
+    .seconda{
+        width: 100%;
+        height: 500px;
+    }
+    .secondb{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

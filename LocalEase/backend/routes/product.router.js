@@ -8,6 +8,28 @@ const { cloudinary } = require("../utils/cloudinary");
 
 productRouter.post("/addproduct", authentication, async (req, res) => {
      try {
+
+          if(req.query.location == "Aerocity"){
+               const product = await ProductModel.find({category:"Aerocity"});
+               res.status(200).send(product);
+          }
+          if(req.query.location === "connaughtplace"){
+               const product = await ProductModel.find({category:"Connaught Place"});
+               res.status(200).send(product);
+          }
+          if(req.query.location === "rajourigarden"){
+               const product = await ProductModel.find({category:"Rajouri Garden Main Market, Rajouri Garden"});
+               res.status(200).send(product);
+          }
+
+          if(req.query.location === "punjabibagh"){
+               const product = await ProductModel.find({category:"Club Road Market, Punjabi Bagh West"});
+               res.status(200).send(product);
+          }
+
+          if(req.query.location === "hkv"){
+               const product = await ProductModel.find({category:"HKV"});
+
           const { adminID, url, img_src, rating_img_src, rating, heading, category, value_2, price, tag, field } = req.body
          
                     const product = new ProductModel({ adminID, url, img_src, rating_img_src, rating, heading, category, value_2, price, tag, field });
@@ -25,6 +47,7 @@ productRouter.get("/", async (req, res) => {
           console.log(category)
           if (category) {
                const product = await ProductModel.find({ category: category });
+
                res.status(200).send(product);
           }
           if ((req.query.min) && (req.query.max)) {

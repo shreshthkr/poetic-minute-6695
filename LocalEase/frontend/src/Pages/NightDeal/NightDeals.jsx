@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NightDeals.module.css";
 import NightDealProductCard from "./NightDealProductCard";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,21 +12,33 @@ export const NightDeals = () => {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const location = useLocation();
+  // const [productData, setProductData] = useState([]);
   const productData = useSelector((store) => {
     return store.productReducer.product;
   });
- 
+
+
+
+
   let obj = {
     params: {
-      value: searchParams.getAll("value"),
+      category: searchParams.getAll("category"),
       _sort: searchParams.get("order") && "price",
       _order: searchParams.get("order"),
     },
   };
 
+
+
+
   useEffect(() => {
-    dispatch(getProduct(obj));
+    dispatch(getProduct(obj))
+   
   }, [location.search]);
+
+
+
+
 
   return (
     <div>
@@ -55,7 +67,7 @@ export const NightDeals = () => {
           <BreadcrumbItem>
             <BreadcrumbLink
               href="#"
-              fontSize="12px"
+              fontSize={[10, 10, 12]}
               color="#999"
               fontWeight="600"
               transition=".5s"
@@ -69,7 +81,7 @@ export const NightDeals = () => {
           <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink
               href="/nightdeals"
-              fontSize="12px"
+              fontSize={[10, 10, 12]}
               color="#999"
               fontWeight="600"
               transition=".5s"
@@ -100,7 +112,7 @@ export const NightDeals = () => {
                 <button className={styles.button2}>Popular</button>
                 <button className={styles.button3}>What's New</button>
                 <button className={styles.button4}>Price (High to Low)</button>
-                <button className={styles.button5}>Price (Low to High)</button>
+                <button className={styles.button5} >Price (Low to High)</button>
               </div>
             </div>
           </div>

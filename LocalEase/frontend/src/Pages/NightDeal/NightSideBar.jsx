@@ -19,35 +19,35 @@ export const NightSideBar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialState = searchParams.getAll("value"); 
   const initialOrder = searchParams.get("order");
-  const [value, setvalue] = useState(initialState || [])
+  const [category, setCategory] = useState(initialState || [])
   const [order, setOrder] = useState(initialOrder || "");
 
   console.log(initialState);
 const handleChange = (e) => {
-  let newValue = [...value];
-  let address = e.target.value;
+  let newCategory = [...category];
+  let value = e.target.value;
 
 
-if(newValue.includes(address)){
-  newValue.splice(newValue.indexOf(address),1)
+if(newCategory.includes(value)){
+  newCategory.splice(newCategory.indexOf(value),1)
 }else{
-  newValue.push(address);
+  newCategory.push(value);
 }
-setvalue(newValue);
+setCategory(newCategory);
 }
 
 
 useEffect(()=>{
   let param = {
-    value
+    category
   };
 
   setSearchParams(param);
-},[value])
+},[category])
 
- const handleSort = () => {
+//  const handleSort = () => {
 
- }
+//  }
 
 
   return (
@@ -150,7 +150,7 @@ useEffect(()=>{
                       <input type="checkbox"
                       value="Aerocity"
                       onChange={handleChange}
-                      checked={value.includes("Aerocity")}
+                      checked={category.includes("Aerocity")}
                       />
                       <Box
                         width="100%"
@@ -176,7 +176,7 @@ useEffect(()=>{
                       type="checkbox"
                       value="HKV"
                       onChange={handleChange}
-                      checked={value.includes("HKV")}
+                      checked={category.includes("HKV")}
                       />
                       <Box
                         width="100%"
@@ -201,7 +201,7 @@ useEffect(()=>{
                       <input type="checkbox"
                       value="Rajouri Garden Main Market, Rajouri Garden"
                       onChange={handleChange}
-                      checked={value.includes("Rajouri Garden Main Market, Rajouri Garden")}
+                      checked={category.includes("Rajouri Garden Main Market, Rajouri Garden")}
                       />
                       <Box
                         width="100%"
@@ -226,7 +226,7 @@ useEffect(()=>{
                       <input type="checkbox"
                         value="Connaught Place"
                         onChange={handleChange}
-                        checked={value.includes("Connaught Place")}
+                        checked={category.includes("Connaught Place")}
                       />
                       <Box
                         width="100%"
@@ -280,7 +280,7 @@ useEffect(()=>{
                       <input type="checkbox"
                          value="Sahibabad"
                          onChange={handleChange}
-                         checked={value.includes("Sahibabad")}
+                         checked={category.includes("Sahibabad")}
                       />
                       <Box
                         width="100%"

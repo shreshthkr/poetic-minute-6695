@@ -196,3 +196,29 @@ label{
     background-color: #fff;
     font-size: 12px;
 }
+@media all and (min-width: 601px) and (max-width: 800px){
+    .promo{
+        width: 98%;
+    }  
+    .ease p{
+        font-size:11px;
+        letter-spacing: 0px;
+    }
+}
+@media all and (min-width: 100px) and (max-width: 600px){
+    .promo{
+        display: none;
+    }
+    .restaurant{
+        display: none;  
+    }
+    .location{
+        display: none;  
+    }
+    .search{
+        display: none;   
+    }
+    .Accordion{
+        display: flex;
+    }
+}
