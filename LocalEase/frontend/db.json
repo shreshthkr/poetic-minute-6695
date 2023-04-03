@@ -1,0 +1,41 @@
+{
+  "cart": [
+    {
+      "data": {
+        "_id": "6426846c2e0e186c09a7f4b1",
+        "tag": "53% OFF",
+        "field": "62 Bought",
+        "Valid_for": "2 People",
+        "Valid_on": "All Days",
+        "title": "4 Beer Pints (330ml) / 4 IMFL (30ml) / 4 Mocktails + 1 Starter/ Pizza/ Pasta (Veg/Non Veg)",
+        "m_price": "1,699",
+        "d_price": "799",
+        "timing": "12 PM - 6 PM"
+      },
+      "qunatity": 1,
+      "id": 2
+    },
+    {
+      "data": {
+        "_id": "6426843de1f3b1101635fec0",
+        "tag": "50% OFF",
+        "field": "60 Bought",
+        "Valid_for": "2 People",
+        "Valid_on": "Sun,Sat",
+        "title": "6 Beer Pints (430ml) / 3 IMFL (30ml) / 4 Mocktails + 1 Starter/ Pizza/ Pasta (Veg/Non Veg)",
+        "m_price": "1,999",
+        "d_price": "999",
+        "timing": "12 PM - 9 PM",
+        "lordimage": [
+          "https://img4.nbstatic.in/tr:w-500/60deccba40e9df000b9f27ac.jpg",
+          "https://img4.nbstatic.in/tr:w-500/63f60d648db992000be134e4.jpg",
+          "https://img4.nbstatic.in/tr:w-500/63f60d6b22b317000bfd0c41.jpg",
+          "https://img4.nbstatic.in/tr:w-500/63f60d728db992000be134e5.jpg",
+          "https://img4.nbstatic.in/tr:w-500/63f60d7a22b317000bfd0c43.jpg"
+        ]
+      },
+      "qunatity": 1,
+      "id": 3
+    }
+  ]
+}

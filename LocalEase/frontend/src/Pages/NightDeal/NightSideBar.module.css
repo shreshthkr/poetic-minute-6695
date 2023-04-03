@@ -1,0 +1,218 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+.promo {
+  width: 95%;
+  height: 200px;
+  margin: auto;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  background-color: white;
+}
+.promo p {
+  background-color: white;
+}
+.inpromo {
+  width: 89%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+}
+.promo_a {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.promo_a p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+.promo_b {
+  width: 100%;
+  background-color: white;
+  margin-top: 30px;
+}
+.promo_b p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  line-height: 22px;
+}
+.promo_c {
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.ease {
+  width: 40%;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgb(203, 192, 192);
+}
+.ease p {
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 3px;
+  color: rgb(61, 134, 244);
+}
+.copy {
+  width: 30%;
+  height: 30px;
+  border: 1px solid rgb(212, 200, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1e9ec;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+.copy p {
+  background-color: #e1e9ec;
+}
+.promo_d {
+  width: 89%;
+  height: 30px;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.valid p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+.know p {
+  font-size: 12px;
+  font-weight: 500;
+  color: red;
+}
+.filter {
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter_in {
+  width: 92%;
+  height: 95%;
+  background-color: #fff;
+}
+.categories_text {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+}
+.categories_text p {
+  font-size: 1em;
+  font-weight: 100;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+.restaurant {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant p {
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #fff;
+}
+.restaurant :last-child {
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.location {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.location p {
+  font-size: 1em;
+  font-weight: 100;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+.search {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.search input[type="text"],
+search,
+select {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid rgb(222, 208, 208);
+}
+.search input:focus {
+  border-color: 1px solid #333;
+}
+.Accordion {
+  background-color: #fff;
+}
+label {
+  background-color: #fff;
+  font-size: 12px;
+}
+@media all and (min-width: 601px) and (max-width: 800px) {
+  .promo {
+    width: 98%;
+  }
+  .ease p {
+    font-size: 11px;
+    letter-spacing: 0px;
+  }
+}
+@media all and (min-width: 100px) and (max-width: 600px) {
+  .promo {
+    display: none;
+  }
+  .restaurant {
+    display: none;
+  }
+  .location {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .Accordion {
+    display: flex;
+  }
+}

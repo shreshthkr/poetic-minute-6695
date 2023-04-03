@@ -1,0 +1,226 @@
+.menu_div {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.menu_div2 {
+  width: 95%;
+  height: 90%;
+}
+.menu_list_div1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_list_div1 > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 14.625px;
+  color: #9999;
+  word-spacing: 0px;
+}
+.off {
+  width: 56px;
+  height: 18px;
+  background-color: #f6fff7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #34a853;
+  border-radius: 3px;
+}
+.off p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #34a853;
+}
+.menu_list_div2 {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_list_div2 > div:first-child {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu_list_div2 > div > h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #fff;
+}
+.price_tag {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.price_tag > div:first-child {
+  width: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price_tag > div > p:first-child {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #9999;
+  font-weight: 600;
+}
+.price_tag > div > p ~ p {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.price_tag > div:last-child > p {
+  text-decoration: none;
+  color: #9999;
+  font-weight: 600;
+}
+.menu_list_div3 {
+  height: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.menu_list_div3 > p {
+  font-weight: 400;
+  color: #34a853;
+}
+.menu_list_div4 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.menu_list_div4 > p {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+.menu_list_div4 > p span {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+}
+.menu_list_div5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_list_div5 > div:first-child {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_list_div5 > div:first-child > div:first-child {
+  width: 47px;
+  height: 32px;
+  border: 1px solid #35a7ff;
+  margin: 0 6px 0 0;
+  padding: 6px 6px 6px 6px;
+}
+.menu_list_div5 > div:first-child > div:first-child > p {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  color: #35a7ff;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.menu_list_div5 > div:first-child > div:last-child {
+  width: 53px;
+  height: 32px;
+  border: 1px solid #35a7ff;
+  margin: 0 6px 0 0;
+  padding: 6px 6px 6px 6px;
+}
+.menu_list_div5 > div:first-child > div:last-child > p {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  color: #35a7ff;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.addtocart {
+  height: 36px;
+  width: 108px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.addtocart > button {
+  width: 100%;
+  height: 100%;
+  background-color: #ef534e;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.addedtocart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.substract {
+  width: 35%;
+  height: 100%;
+  background-color: #ef534e;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.add {
+  width: 35%;
+  height: 100%;
+  background-color: #ef534e;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.count {
+  font-weight: 700;
+}
+@media all and (min-width: 801px) and (max-width: 800px) {
+  .menu_list_div2 {
+    height: auto;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .price_tag {
+    width: 20%;
+  }
+}
+@media all and (min-width: 100px) and (max-width: 800px) {
+  .price_tag > div:last-child {
+    display: none;
+  }
+  .firstdiv {
+    width: 100%;
+  }
+}

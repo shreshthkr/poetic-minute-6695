@@ -1,22 +1,22 @@
 import {
-  GET_PRODUCT_ERROR,
-  GET_PRODUCT_REQUEST,
-  GET_PRODUCT_SUCCESS,
+  GET_DEAL_ERROR,
+  GET_DEAL_REQUEST,
+  GET_DEAL_SUCCESS,
 } from "./actionType";
 
 const initialState = {
   isLoading: false,
-  product: [],
+  deal: [],
   isError: false,
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case GET_PRODUCT_REQUEST:
+    case GET_DEAL_REQUEST:
       return { ...state, isLoading: true };
-    case GET_PRODUCT_SUCCESS:
-      return { ...state, isLoading: false, product: payload };
-    case GET_PRODUCT_ERROR:
+    case GET_DEAL_SUCCESS:
+      return { ...state, isLoading: false, deal: payload };
+    case GET_DEAL_ERROR:
       return { ...state, isLoading: false, isError: true };
     default:
       return state;
