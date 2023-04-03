@@ -1,0 +1,91 @@
+.payment {
+  margin-top: 100px;
+}
+.options {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.main {
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.method {
+  width: 130px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px;
+}
+.method > div {
+  width: 100%;
+  height: 24.8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6d4d9;
+}
+.method > div:hover {
+  background-color: #fff;
+}
+.form {
+  width: 694px;
+  height: 398px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.forma {
+  width: 95%;
+  height: 98%;
+}
+.select {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.select > p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+}
+.ima {
+  width: 180px;
+  height: 73px;
+  border: 2px solid #ef534e;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  margin-top: 20px;
+}
+.ima > div {
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+.pay {
+  width: 132px;
+  height: 44px;
+  background-color: #ef534e;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.pay button {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #ef534e;
+}
