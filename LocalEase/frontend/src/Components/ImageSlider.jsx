@@ -1,10 +1,16 @@
 import React from "react";
-import { Box, IconButton, useBreakpointValue,Button,Icon } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Button,
+  Icon,
+} from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
-import {  BiRightArrowAlt } from "react-icons/bi";
-import {  AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
-import { AiFillStar } from 'react-icons/ai'
-import { SimpleGrid } from '@chakra-ui/react';
+import { BiRightArrowAlt } from "react-icons/bi";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+import { SimpleGrid } from "@chakra-ui/react";
 
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
@@ -29,7 +35,7 @@ const settings = {
   initialSlide: 0,
 };
 
-export default function ImageSlider({data}) {
+export default function ImageSlider({ data }) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState(1);
@@ -40,14 +46,14 @@ export default function ImageSlider({data}) {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
   const navigate = useNavigate();
-  const handleClick=({id})=>{
-    navigate(`/products/${id}`)
-  }
- 
+  const handleClick = ({ id }) => {
+    navigate(`/products/${id}`);
+  };
 
   return (
     <Box
-      mt="10px" maxH={"200px"}
+      mt="10px"
+      maxH={"200px"}
       position={"relative"}
       margin="auto"
       overflow={"hidden"}
@@ -75,8 +81,10 @@ export default function ImageSlider({data}) {
         transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
-      >  
-   <Button   backgroundColor={"blue.200"}><AiFillCaretLeft color="black" /></Button>
+      >
+        <Button backgroundColor={"blue.200"}>
+          <AiFillCaretLeft color="black" />
+        </Button>
       </IconButton>
       {/* Right Icon */}
       <IconButton
@@ -90,27 +98,29 @@ export default function ImageSlider({data}) {
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
-     <Button   backgroundColor={"blue.200"}><AiFillCaretRight color="black" /></Button>
+        <Button backgroundColor={"blue.200"}>
+          <AiFillCaretRight color="black" />
+        </Button>
       </IconButton>
       {/* Slider */}
-      
+
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {data?.map((el) => (
-          <Card key={el.id}
-          textAlign="center"
-          padding={5}
-          cursor={"pointer"}
-          border="2px solid grey"
-          mt="5px"
-          maxH="250px"
-          onClick={()=>handleClick(el)}
-          maxW={"130px"}>
-           <Image  src={el.img} maxW="100px" maxH={"150px"} m="30px auto"  />
-       </Card>
+          <Card
+            key={el.id}
+            textAlign="center"
+            padding={5}
+            cursor={"pointer"}
+            border="2px solid grey"
+            mt="5px"
+            maxH="250px"
+            onClick={() => handleClick(el)}
+            maxW={"130px"}
+          >
+            <Image src={el.img} maxW="100px" maxH={"150px"} m="30px auto" />
+          </Card>
         ))}
       </Slider>
-      
     </Box>
   );
 }
-

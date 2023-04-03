@@ -1,4 +1,4 @@
-import React,{useState ,useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./NightSideBar.module.css";
 import { RiArrowRightSFill } from "react-icons/ri";
 import {
@@ -11,44 +11,37 @@ import {
 import { Box, Text } from "@chakra-ui/react";
 import { useSearchParams } from "react-router-dom";
 
-
-
 export const NightSideBar = () => {
-
-
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialState = searchParams.getAll("value"); 
+  const initialState = searchParams.getAll("value");
   const initialOrder = searchParams.get("order");
-  const [category, setCategory] = useState(initialState || [])
+  const [category, setCategory] = useState(initialState || []);
   const [order, setOrder] = useState(initialOrder || "");
 
   console.log(initialState);
-const handleChange = (e) => {
-  let newCategory = [...category];
-  let value = e.target.value;
+  const handleChange = (e) => {
+    let newCategory = [...category];
+    let value = e.target.value;
 
-
-if(newCategory.includes(value)){
-  newCategory.splice(newCategory.indexOf(value),1)
-}else{
-  newCategory.push(value);
-}
-setCategory(newCategory);
-}
-
-
-useEffect(()=>{
-  let param = {
-    category
+    if (newCategory.includes(value)) {
+      newCategory.splice(newCategory.indexOf(value), 1);
+    } else {
+      newCategory.push(value);
+    }
+    setCategory(newCategory);
   };
 
-  setSearchParams(param);
-},[category])
+  useEffect(() => {
+    let param = {
+      category,
+    };
 
-//  const handleSort = () => {
+    setSearchParams(param);
+  }, [category]);
 
-//  }
+  //  const handleSort = () => {
 
+  //  }
 
   return (
     <>
@@ -111,17 +104,18 @@ useEffect(()=>{
               >
                 <AccordionItem backgroundColor="white">
                   <h2 backgroundColor="white">
-                    <AccordionButton backgroundColor="white"
-                     border="none"
-                     _hover={{backgroundColor:"white"}}
-                     >
+                    <AccordionButton
+                      backgroundColor="white"
+                      border="none"
+                      _hover={{ backgroundColor: "white" }}
+                    >
                       <Box
                         as="span"
                         flex="1"
                         textAlign="left"
                         height="25px"
                         backgroundColor="white"
-                        _hover={{backgroundColor:"white"}}
+                        _hover={{ backgroundColor: "white" }}
                       >
                         <Text
                           backgroundColor="white"
@@ -147,10 +141,11 @@ useEffect(()=>{
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox"
-                      value="Aerocity"
-                      onChange={handleChange}
-                      checked={category.includes("Aerocity")}
+                      <input
+                        type="checkbox"
+                        value="Aerocity"
+                        onChange={handleChange}
+                        checked={category.includes("Aerocity")}
                       />
                       <Box
                         width="100%"
@@ -172,11 +167,11 @@ useEffect(()=>{
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input 
-                      type="checkbox"
-                      value="HKV"
-                      onChange={handleChange}
-                      checked={category.includes("HKV")}
+                      <input
+                        type="checkbox"
+                        value="HKV"
+                        onChange={handleChange}
+                        checked={category.includes("HKV")}
                       />
                       <Box
                         width="100%"
@@ -198,10 +193,13 @@ useEffect(()=>{
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox"
-                      value="Rajouri Garden Main Market, Rajouri Garden"
-                      onChange={handleChange}
-                      checked={category.includes("Rajouri Garden Main Market, Rajouri Garden")}
+                      <input
+                        type="checkbox"
+                        value="Rajouri Garden Main Market, Rajouri Garden"
+                        onChange={handleChange}
+                        checked={category.includes(
+                          "Rajouri Garden Main Market, Rajouri Garden"
+                        )}
                       />
                       <Box
                         width="100%"
@@ -223,7 +221,8 @@ useEffect(()=>{
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox"
+                      <input
+                        type="checkbox"
                         value="Connaught Place"
                         onChange={handleChange}
                         checked={category.includes("Connaught Place")}
@@ -251,7 +250,7 @@ useEffect(()=>{
                       backgroundColor="#fff"
                       border="none"
                       marginTop="15px"
-                      _hover={{backgroundColor:"white"}}
+                      _hover={{ backgroundColor: "white" }}
                     >
                       <Box
                         as="span"
@@ -277,10 +276,11 @@ useEffect(()=>{
                       gap="10px"
                       backgroundColor="#fff"
                     >
-                      <input type="checkbox"
-                         value="Sahibabad"
-                         onChange={handleChange}
-                         checked={category.includes("Sahibabad")}
+                      <input
+                        type="checkbox"
+                        value="Sahibabad"
+                        onChange={handleChange}
+                        checked={category.includes("Sahibabad")}
                       />
                       <Box
                         width="100%"
